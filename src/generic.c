@@ -14,6 +14,19 @@ void get_bits_on_char (int c, pid_t pid)
 	}
 }
 
+void send_message (char *message, pid_t pid)
+{
+	int	index;
+
+	index = 0;
+	while(message[index])
+    {
+        get_bits_on_char(message[index], pid);
+        index++;
+    }
+	get_bits_on_char(0, pid);
+}
+
 int	ft_isdigit(int c)
 {
 	return (c >= 48 && c <= 57);

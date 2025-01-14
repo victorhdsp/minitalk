@@ -1,4 +1,4 @@
-CC=cc -Wall -Werror -Wextra -I ./ -ggdb
+CC=cc -Wall -Wextra -I ./ -ggdb
 
 CLIENT=minitalk_client
 CLIENT_FILES= ./src/generic.o ./src/string.o ./src/client.o
