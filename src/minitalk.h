@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:32:03 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/14 08:46:28 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:50:44 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MINITALK_H
 
 # define CHAR_SIZE 8
+# define SIS_TIME 120
 
 #include <stdlib.h>
 #include <signal.h>

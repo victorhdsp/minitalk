@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:30:45 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/14 13:04:19 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:42:19 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main (int argc, char **argv)
     send_message(message, server_pid);
     while (time)
     {
-        usleep(10);
+        usleep(SIS_TIME);
         time--;
     }
 }

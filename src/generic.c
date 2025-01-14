@@ -10,7 +10,7 @@ void get_bits_on_char (int c, pid_t pid)
 			kill(pid, SIGUSR2);
 		else
 			kill(pid, SIGUSR1);
-		usleep(10);
+		usleep(SIS_TIME);
 	}
 }
 

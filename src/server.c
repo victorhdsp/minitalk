@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:42:21 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/14 13:04:29 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/14 19:14:24 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void bit_handler(int signal, siginfo_t *info, void *notused)
             ft_putchar(value, 1);
         count = CHAR_SIZE - 1;
         value = 0;
+        usleep(SIS_TIME);
     }
 }
 
@@ -41,11 +42,12 @@ int main()
     struct sigaction action;
 
     action.sa_sigaction = bit_handler;
+    sigemptyset(&action.sa_mask);
     action.sa_flags = SA_SIGINFO;
     ft_putnbr(pid, 1);
     ft_putstr("\n", 1);
     sigaction(SIGUSR1, &action, NULL);
     sigaction(SIGUSR2, &action, NULL);  
     while (1)
-        usleep(10);
+        usleep(SIS_TIME);
 }
