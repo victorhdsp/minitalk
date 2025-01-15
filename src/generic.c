@@ -1,12 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   generic.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 09:36:13 by vide-sou          #+#    #+#             */
+/*   Updated: 2025/01/15 09:37:13 by vide-sou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
-void get_bits_on_char (int c, pid_t pid)
+void	get_bits_on_char(int c, pid_t pid)
 {
-    int i = CHAR_SIZE;
+	int	i;
 
-    while (i--)
+	i = CHAR_SIZE;
+	while (i--)
 	{
-		usleep((U_SECOND/100)/CHAR_SIZE);
+		usleep((U_SECOND / 100) / CHAR_SIZE);
 		if (c >> i & 1)
 			kill(pid, SIGUSR2);
 		else
@@ -14,16 +27,16 @@ void get_bits_on_char (int c, pid_t pid)
 	}
 }
 
-int send_message (char *message, pid_t pid)
+int	send_message(char *message, pid_t pid)
 {
 	int	index;
 
 	index = 0;
-	while(message[index])
-    {
-        get_bits_on_char(message[index], pid);
-        index++;
-    }
+	while (message[index])
+	{
+		get_bits_on_char(message[index], pid);
+		index++;
+	}
 	get_bits_on_char(0, pid);
 	return (1);
 }
@@ -33,7 +46,7 @@ int	ft_isdigit(int c)
 	return (c >= 48 && c <= 57);
 }
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	char	*nb;
 	long	result;
