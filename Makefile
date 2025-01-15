@@ -1,9 +1,9 @@
 CC=cc -Wall -Wextra -I ./ -ggdb
 
-CLIENT=minitalk_client
+CLIENT=client
 CLIENT_FILES= ./src/generic.o ./src/string.o ./src/client.o
 
-SERVER=minitalk_server
+SERVER=server
 SERVER_FILES= ./src/generic.o ./src/string.o ./src/server.o
 
 all: client server
