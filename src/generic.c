@@ -6,15 +6,15 @@ void get_bits_on_char (int c, pid_t pid)
 
     while (i--)
 	{
+		usleep((U_SECOND/100)/CHAR_SIZE);
 		if (c >> i & 1)
 			kill(pid, SIGUSR2);
 		else
 			kill(pid, SIGUSR1);
-		usleep(SIS_TIME);
 	}
 }
 
-void send_message (char *message, pid_t pid)
+int send_message (char *message, pid_t pid)
 {
 	int	index;
 
@@ -25,6 +25,7 @@ void send_message (char *message, pid_t pid)
         index++;
     }
 	get_bits_on_char(0, pid);
+	return (1);
 }
 
 int	ft_isdigit(int c)

@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:30:45 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/14 18:42:19 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/15 09:16:19 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ int main (int argc, char **argv)
 {
     pid_t   server_pid;
     char    *message;
-    int     time;
-
-    time = 1000;
+    
     if (argc != 3)
         ft_error_message();
     server_pid = ft_atoi(argv[1]);
@@ -49,9 +47,6 @@ int main (int argc, char **argv)
     signal(SIGUSR1, bit_handler);
     signal(SIGUSR2, bit_handler);
     send_message(message, server_pid);
-    while (time)
-    {
-        usleep(SIS_TIME);
-        time--;
-    }
+    while (1)
+        usleep(U_SECOND);
 }
