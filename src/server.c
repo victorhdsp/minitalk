@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:42:21 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/15 09:38:43 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:49:40 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,5 @@ int	main(void)
 	ft_putstr("\n", 1);
 	sigaction(SIGUSR1, &action, NULL);
 	sigaction(SIGUSR2, &action, NULL);
-	while (1)
-		usleep(U_SECOND);
+	while (1);
 }

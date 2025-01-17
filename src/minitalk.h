@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:32:03 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/15 09:23:41 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/17 14:28:55 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define MINITALK_H
 
 # define CHAR_SIZE 8
-# define U_SECOND 900000
 
 # include <signal.h>
 # include <stdlib.h>

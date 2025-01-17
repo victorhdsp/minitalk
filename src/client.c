@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:30:45 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/15 09:37:43 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:49:51 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ int	main(int argc, char **argv)
 	signal(SIGUSR2, bit_handler);
 	send_message(message, server_pid);
 	while (1)
-		usleep(U_SECOND);
+		pause();
 }
