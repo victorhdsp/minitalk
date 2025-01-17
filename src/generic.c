@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 09:36:13 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/17 14:31:47 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/17 15:22:10 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	get_bits_on_char(int c, pid_t pid)
 			kill(pid, SIGUSR2);
 		else
 			kill(pid, SIGUSR1);
-		usleep(700);
+		usleep(U_SECOND);
 	}
 }
 

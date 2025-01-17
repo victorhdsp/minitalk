@@ -6,14 +6,10 @@ CLIENT_FILES= ./src/generic.o ./src/string.o ./src/client.o
 SERVER=server
 SERVER_FILES= ./src/generic.o ./src/string.o ./src/server.o
 
-all: client server
-
-client: $(CLIENT)
+all: $(CLIENT) $(SERVER)
 
 $(CLIENT):$(CLIENT_FILES)
 	$(CC) $^ -o $@
-
-server: $(SERVER)
 
 $(SERVER):$(SERVER_FILES)
 	$(CC) $^ -o $@
