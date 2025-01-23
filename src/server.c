@@ -48,5 +48,6 @@ int	main(void)
 	ft_putstr("\n", 1);
 	sigaction(SIGUSR1, &action, NULL);
 	sigaction(SIGUSR2, &action, NULL);
-	while (1);
+	while (1)
+		;
 }
