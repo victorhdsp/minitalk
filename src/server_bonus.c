@@ -6,7 +6,7 @@
 /*   By: vide-sou <vide-sou@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:42:21 by vide-sou          #+#    #+#             */
-/*   Updated: 2025/01/26 13:54:10 by vide-sou         ###   ########.fr       */
+/*   Updated: 2025/01/26 13:58:40 by vide-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ void	bit_handler(int signal, siginfo_t *info, void *notused)
 	if (count < 0)
 	{
 		if (value == 0)
-		{
 			send_message("Done", info->si_pid);
-			ft_putstr("\n", 1);
-		}
 		else
 			ft_putchar(value, 1);
 		count = CHAR_SIZE - 1;

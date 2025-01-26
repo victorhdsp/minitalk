@@ -38,3 +38,5 @@ fclean: clean
 	rm -f $(CLIENT_B) $(SERVER_B)
 
 re: clean all
+
+.PHONY: all clean fclean re bonus
